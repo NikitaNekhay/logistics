@@ -20,7 +20,7 @@ public class OrderOffer {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "order_client_id")
-    private OrderClient orderClient;
+    private ClientRequest clientRequest;
 
     private String typeTransport;
     private BigDecimal price;

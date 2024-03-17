@@ -33,7 +33,8 @@ public class SpringSecurityConfig {
         http
                 .authorizeHttpRequests(request -> request
                         .requestMatchers("/admin/**", "/feedback/delete/**").hasAuthority("ROLE_ADMIN")
-                        .requestMatchers("/main","/registration", "/images/**", "/hosts",  "/venues", "/music-bands", "/static/**", "/reviews", "/feedback").permitAll()
+                        .requestMatchers("/admin/**", "/feedback/delete/**").hasAuthority("ROLE_COMPANY")
+                        .requestMatchers("/main","/registration", "/images/**", "/static/**", "/reviews", "/feedback").permitAll()
                         .anyRequest().authenticated())
                 .formLogin(formLogin -> formLogin
                         .loginPage("/login")            // Указываем путь к своей странице входа

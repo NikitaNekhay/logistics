@@ -5,12 +5,14 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.math.BigDecimal;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "order_list")
-public class OrderList {
+@Table(name = "company_offer")
+public class CompanyOffer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -19,5 +21,6 @@ public class OrderList {
     @JoinColumn(name = "company_id")
     private Company company;
 
-    // Add other fields from the table as needed
+    private BigDecimal total_price;
+
 }

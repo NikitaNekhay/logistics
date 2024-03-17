@@ -32,7 +32,6 @@ public class Image {
     private boolean isPreviewImage;
 
     @Lob
-    @Column(columnDefinition = "MEDIUMBLOB")
     private byte[] bytes;
 
 }

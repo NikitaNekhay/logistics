@@ -18,6 +18,8 @@ public class Company {
     private Long id;
     private String name;
 
+    // добавить owner привязку на user
+
     private BigDecimal currency_train;
     private BigDecimal currency_auto;
     private BigDecimal currency_air;

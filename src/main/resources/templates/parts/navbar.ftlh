@@ -49,6 +49,12 @@
                         <a class="dropdown-item" href="/user/bookings">Мои заказы</a>
                     </#if>
 
+                    <#if user.roles?seq_contains("ROLE_COMPANY")>
+                        <a class="dropdown-item" href="/account/edit">Редактирование аккаунта</a>
+                        <a class="dropdown-item" href="/company">Управление компанией</a>
+                        <a class="dropdown-item" href="/user/bookings">Мои заказы</a>
+                    </#if>
+
                     <!-- Пункты меню для администратора -->
                     <#if user.roles?seq_contains("ROLE_ADMIN")>
                         <a class="dropdown-item" href="/admin/users">Управление пользователями</a>
